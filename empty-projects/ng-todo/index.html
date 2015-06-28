@@ -30,11 +30,11 @@
         </span>
       </div>
 
-      <div class="input-group input-group-lg"><!-- repeat  -->
+      <div ng-repeat="todo in todos" class="input-group input-group-lg"><!-- repeat  -->
         <span class="input-group-addon">
-          <input type="checkbox"> <!-- model -->
+          <input ng-model="todo.completed" type="checkbox"> <!-- model -->
         </span>
-        <input class="form-control" type="text"><!-- model / class  -->
+        <input ng-model="todo.val" ng-class="{ finished: todo.completed }" class="form-control" type="text"><!-- model / class  -->
         <span class="input-group-btn">
           <button class="btn btn-danger" type="button"><!-- click  -->
             <i class="glyphicon glyphicon-remove"></i>
