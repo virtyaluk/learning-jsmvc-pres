@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body><!-- app -->
+<body ng-app="ngTodo"><!-- app -->
   <div class="navbar navbar-inverse" role="navigation">
     <div class="container">
       <a class="navbar-brand" href="#">ng-todo</a>
@@ -15,14 +15,14 @@
     </div>
   </div>
 
-  <section><!-- ctrl -->
+  <section ng-controller="NgTodoCtrl"><!-- ctrl -->
     <div class="outer-container">
 
       <div class="add-todo-group input-group input-group-lg">
         <span class="input-group-addon">
           <i class="glyphicon glyphicon-list-alt"></i>
         </span>
-        <input placeholder="New Todo" class="form-control" type="text"><!-- model  -->
+        <input ng-model="newTask" placeholder="New Todo" class="form-control" type="text"><!-- model  -->
         <span class="input-group-btn">
           <button class="btn btn-success" type="button"><!-- click  -->
             <i class="glyphicon glyphicon-plus"></i>
