@@ -1,0 +1,1 @@
+window.Todos = ember.Application.create();
