@@ -38,7 +38,7 @@
         <!-- /each -->
 
         <div class="btn-clear-group">
-          <button class="btn btn-primary btn-clear">Clear Completed</button> <!-- action -->
+          <button {{action "clearCompleted"}} class="btn btn-primary btn-clear">Clear Completed</button> <!-- action -->
         </div>
       </div>
     </section>
@@ -48,7 +48,7 @@
   <script type="text/x-handlebars" id="components/todo-entry">
     <div class="input-group input-group-lg">
           <span class="input-group-addon">
-            {{input checked=checked type="checkbox"}}
+            {{input checked=completed type="checkbox"}}
           </span>
 
           {{input classNameBindings=":form-control completed:finished" value=val}} <!-- value classNameBindings -->
