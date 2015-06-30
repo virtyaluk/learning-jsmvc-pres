@@ -9,8 +9,14 @@ window.TodoView = Backbone.View.extend({
 });
 
 window.TodosView = Backbone.View.extend({
+    initialize: function() {
+        this.collection.on('add', this.addOne, this);
+        this.collection.on('reset', this.addAll, this);
+        this.collection.on('destory', this.render, this);
+    },
+
     addOne: function(todoItem) {
-        var todoView = new todoView({ model: todoItem });
+        var todoView = new TodoView({ model: todoItem });
         
         this.$el.append(todoView.render().el);
     },
