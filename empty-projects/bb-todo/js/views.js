@@ -3,7 +3,15 @@ window.TodoView = Backbone.View.extend({
         this.model.on('change', this.render, this);
     },
     events: {
-        'change input[type=checkbox]': 'toggle'
+        'change input[type=checkbox]': 'toggle',
+        'change .form-control': 'update',
+        'click .btn-danger': 'remove'
+    },
+    remove: function() {
+        this.model.destroy();
+    },
+    update: function() {
+        this.model.updateText(this.$('.form-control').val());
     },
     toggle: function() {
         this.model.toggle();
@@ -21,7 +29,7 @@ window.TodosView = Backbone.View.extend({
     initialize: function() {
         this.collection.on('add', this.addOne, this);
         this.collection.on('reset', this.addAll, this);
-        this.collection.on('destory', this.render, this);
+        this.collection.on('destroy', this.render, this);
     },
 
     addOne: function(todoItem) {
