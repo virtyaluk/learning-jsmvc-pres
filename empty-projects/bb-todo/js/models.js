@@ -1,4 +1,8 @@
-window.TodoItem = Backbone.Model.extend({});
+window.TodoItem = Backbone.Model.extend({
+    toggle: function() {
+        this.set('completed', !this.get('completed'));
+    }
+});
 
 window.TodoItems = Backbone.Collection.extend({
     model: TodoItem,
