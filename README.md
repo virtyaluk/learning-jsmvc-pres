@@ -4,7 +4,7 @@ My progress in learning [Choosing a JavaScript Framework](https://www.pluralsigh
 
 ## :green_book: License
 
-[Licensed under the MIT license.](https://github.com/virtyaluk/jsmvc-pres/blob/master/LICENSE)
+[Licensed under the MIT license.](https://github.com/virtyaluk/jsmvc-pres/blob/master/LICENSE.md)
 
 Copyright (c) 2015 Bohdan Shtepan
 
